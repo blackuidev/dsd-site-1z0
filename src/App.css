@@ -1,3 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent body scroll, let individual sections scroll */
+}
 
+/* Custom scrollbar for webkit browsers to match Spotify's dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-track {
+  background: #282828; /* Dark grey track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #535353; /* Medium grey thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a7a7a7; /* Lighter grey on hover */
+}
